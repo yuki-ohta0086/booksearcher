@@ -1,7 +1,7 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "book/searcher/version"
+require "book-searcher/searcher/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "book-searcher"
@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files = ['lib/book/searcher/find_book.rb', 'lib/book/searcher/version.rb', 'lib/book/searcher.rb']
+  spec.files = Dir['lib/**/*.rb']
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
