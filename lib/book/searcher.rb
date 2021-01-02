@@ -1,8 +1,2 @@
-require "book/searcher/version"
-
-module Book
-  module Searcher
-    class Error < StandardError; end
-    # Your code goes here...
-  end
-end
+require 'book/searcher/version'
+require 'lib/book/searcher/find_book.rb'
