@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 module Book
   module Searcher
-    class GoogleBooks
-      GOOGLEAPI_URL = 'GET https://www.googleapis.com/books/v1/volumes?q='
+    class Find_book
+      GOOGLEAPI_URL = 'https://www.googleapis.com/books/v1/volumes?q='
 
       def get_book_json(params)
         uri = URI.parse(GOOGLEAPI_URL + params)
